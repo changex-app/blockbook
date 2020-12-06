@@ -1,0 +1,7 @@
+version: '2'
+services:
+  blockbook:
+    build: .
+    ports:
+      - '9130:9130'
+      - '9030:9030'
