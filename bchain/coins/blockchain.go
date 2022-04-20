@@ -128,6 +128,8 @@ func init() {
 	BlockChainFactories["Trezarcoin"] = trezarcoin.NewTrezarcoinRPC
 	BlockChainFactories["ECash"] = ecash.NewECashRPC
 	BlockChainFactories["Hydra"] = hydra.NewHydraRPC
+	BlockChainFactories["BinanceSmartChain"] = eth.NewEthereumRPC
+	BlockChainFactories["BinanceSmartChain Testnet"] = eth.NewEthereumRPC
 }
 
 // GetCoinNameFromConfig gets coin name and coin shortcut from config file

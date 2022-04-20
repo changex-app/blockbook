@@ -1,0 +1,64 @@
+{
+    "coin": {
+      "name": "Binance Smart Chain",
+      "shortcut": "BNB",
+      "label": "BinanceSmartChain",
+      "alias": "binancesmartchain"
+    },
+    "ports": {
+      "backend_rpc": 8064,
+      "backend_message_queue": 0,
+      "backend_p2p": 38364,
+      "backend_http": 8164,
+      "blockbook_internal": 9064,
+      "blockbook_public": 9164
+    },
+    "ipc": {
+      "rpc_url_template": "ws://127.0.0.1:{{.Ports.BackendRPC}}",
+      "rpc_timeout": 25
+    },
+    "backend": {
+      "package_name": "backend-binancesmartchain",
+      "package_revision": "satoshilabs-1",
+      "system_user": "binancesmartchain",
+      "version": "1.10.17-25c9b49f",
+      "binary_url": "https://github.com/bnb-chain/bsc/releases/download/v1.1.9/mainnet.zip",
+      "verification_type": "sha256",
+      "verification_source": "6dd6976b9c8d407e95ed99cd46f7badfa410f3f374ea3e360defab0f63fa3ed2",
+      "extract_command": "unzip -d backend",
+      "exclude_files": [],
+      "exec_command_template": "/bin/sh -c '{{.Env.BackendInstallPath}}/{{.Coin.Alias}}/geth --ipcdisable --syncmode full --txlookuplimit 0 --cache 1024 --nat none --datadir {{.Env.BackendDataPath}}/{{.Coin.Alias}}/backend --port 38364 --ws --ws.addr 127.0.0.1 --ws.port {{.Ports.BackendRPC}} --ws.origins \"*\" --http --http.port 8164 -http.addr 127.0.0.1 --http.corsdomain \"*\" --http.vhosts \"*\" 2>>{{.Env.BackendDataPath}}/{{.Coin.Alias}}/backend/{{.Coin.Alias}}.log'",
+      "logrotate_files_template": "{{.Env.BackendDataPath}}/{{.Coin.Alias}}/backend/{{.Coin.Alias}}.log",
+      "postinst_script_template": "",
+      "service_type": "simple",
+      "service_additional_params_template": "",
+      "protect_memory": true,
+      "mainnet": true,
+      "server_config_file": "",
+      "client_config_file": ""
+    },
+    "blockbook": {
+      "package_name": "blockbook-binancesmartchain",
+      "system_user": "blockbook-binancesmartchain",
+      "internal_binding_template": ":{{.Ports.BlockbookInternal}}",
+      "public_binding_template": ":{{.Ports.BlockbookPublic}}",
+      "explorer_url": "",
+      "additional_params": "",
+      "block_chain": {
+        "parse": true,
+        "mempool_workers": 8,
+        "mempool_sub_workers": 2,
+        "block_addresses_to_keep": 300,
+        "additional_params": {
+          "mempoolTxTimeoutHours": 48,
+          "queryBackendOnMempoolResync": false,
+          "fiat_rates": "coingecko",
+          "fiat_rates_params": "{\"url\": \"https://api.coingecko.com/api/v3\", \"coin\": \"bnb\", \"periodSeconds\": 60}"
+        }
+      }
+    },
+    "meta": {
+      "package_maintainer": "IT",
+      "package_maintainer_email": "it@satoshilabs.com"
+    }
+  }
