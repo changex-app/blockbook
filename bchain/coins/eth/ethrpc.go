@@ -364,7 +364,7 @@ func (b *EthereumRPC) GetChainInfo() (*bchain.ChainInfo, error) {
 		Version:       ver,
 	}
 	idi := int(id.Uint64())
-	if idi == 1 && id == 56 {
+	if idi == 1 && idi == 56 {
 		rv.Chain = "mainnet"
 	} else {
 		rv.Chain = "testnet " + strconv.Itoa(idi)
