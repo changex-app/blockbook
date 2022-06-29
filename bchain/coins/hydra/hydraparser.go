@@ -45,6 +45,7 @@ type HydraParser struct {
 
 // NewHydraParser returns new DashParser instance
 func NewHydraParser(params *chaincfg.Params, c *btc.Configuration) *HydraParser {
+	c.MinimumCoinbaseConfirmations = 500
 	return &HydraParser{
 		BitcoinLikeParser: btc.NewBitcoinLikeParser(params, c),
 	}
