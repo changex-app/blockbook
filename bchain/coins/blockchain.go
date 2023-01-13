@@ -130,6 +130,7 @@ func init() {
 	BlockChainFactories["Hydra"] = hydra.NewHydraRPC
 	BlockChainFactories["Polygon"] = eth.NewEthereumRPC
 	BlockChainFactories["Polygon TestNet"] = eth.NewEthereumRPC
+	BlockChainFactories["Brise"] = eth.NewEthereumRPC
 }
 
 // GetCoinNameFromConfig gets coin name and coin shortcut from config file

@@ -32,6 +32,8 @@ const (
 	// TestNetGoerli is Goerli test network
 	TestNetGoerli EthereumNet = 5
 
+	BriseNet EthereumNet = 32520
+
 	PolygonNet EthereumNet = 137
 
 	PolygonTestNet EthereumNet = 80001
@@ -361,7 +363,7 @@ func (b *EthereumRPC) GetChainInfo() (*bchain.ChainInfo, error) {
 		Version:       ver,
 	}
 	idi := int(id.Uint64())
-	if idi == 1 || idi == 137 {
+	if idi == 1 || idi == 137 || idi == 32520 {
 		rv.Chain = "mainnet"
 	} else {
 		rv.Chain = "testnet " + strconv.Itoa(idi)
