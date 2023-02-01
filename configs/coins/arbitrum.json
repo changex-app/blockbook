@@ -6,7 +6,7 @@
         "alias": "Arbitrum"
     },
     "ports": {
-        "backend_rpc": 8096,
+        "backend_rpc": 8098,
         "backend_message_queue": 0,
         "blockbook_internal": 9098,
         "blockbook_public": 9198

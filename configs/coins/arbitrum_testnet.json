@@ -6,7 +6,7 @@
         "alias": "Arbitrum TestNet"
     },
     "ports": {
-        "backend_rpc": 18096,
+        "backend_rpc": 18098,
         "backend_message_queue": 0,
         "blockbook_internal": 19098,
         "blockbook_public": 19198
