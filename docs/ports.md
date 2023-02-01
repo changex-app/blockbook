@@ -47,6 +47,7 @@
 | BitZeny                | 9095                    | 9195                  | 8095             | 38395                       |
 | Trezarcoin             | 9096                    | 9196                  | 8096             | 38396                       |
 | eCash                  | 9097                    | 9197                  | 8097             | 38397                       |
+| Polygon                  | 9099                    | 9199                  | 8099             |                       |
 | Bitcoin Signet         | 19020                   | 19120                 | 18020            | 48320                       |
 | Bitcoin Regtest        | 19021                   | 19121                 | 18021            | 48321                       |
 | Ethereum Goerli        | 19026                   | 19126                 | 18026            | 48326 p2p                   |
@@ -70,5 +71,6 @@
 | Flo Testnet            | 19066                   | 19166                 | 18066            | 48366                       |
 | Qtum Testnet           | 19088                   | 19188                 | 18088            | 48388                       |
 | Omotenashicoin Testnet | 19089                   | 19189                 | 18089            | 48389                       |
+| Polygon Testnet | 19099                   | 19199                 | 18099            |                       |
 
 > NOTE: This document is generated from coin definitions in `configs/coins`.
