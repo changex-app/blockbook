@@ -39,6 +39,11 @@ const (
 	ArbitrumNet EthereumNet = 42161
 
 	ArbitrumTestNet EthereumNet = 421611
+
+	Optimism EthereumNet = 10
+
+	// OptimismTestNetGoerli is Goerli test network
+	OptimismTestNet EthereumNet = 420
 )
 
 // Configuration represents json config file
@@ -176,6 +181,9 @@ func (b *EthereumRPC) Initialize() error {
 	case PolygonNet:
 		b.Testnet = false
 		b.Network = "polygon_mainnet"
+	case Optimism:
+		b.Testnet = false
+		b.Network = "optimism_mainnet"
 	case ArbitrumNet:
 		b.Testnet = false
 		b.Network = "arbitrum_mainnet"
@@ -185,6 +193,9 @@ func (b *EthereumRPC) Initialize() error {
 	case PolygonTestNet:
 		b.Testnet = true
 		b.Network = "Polygon_testnet"
+	case OptimismTestNet:
+		b.Testnet = true
+		b.Network = "optimism_testnet"
 	default:
 		return errors.Errorf("Unknown network id %v", id)
 	}
@@ -371,7 +382,7 @@ func (b *EthereumRPC) GetChainInfo() (*bchain.ChainInfo, error) {
 		Version:       ver,
 	}
 	idi := int(id.Uint64())
-	if idi == 1 || idi == 137 {
+	if idi == 1 || idi == 137 || idi == 10 {
 		rv.Chain = "mainnet"
 	} else {
 		rv.Chain = "testnet " + strconv.Itoa(idi)

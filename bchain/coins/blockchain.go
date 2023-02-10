@@ -132,6 +132,8 @@ func init() {
 	BlockChainFactories["Polygon TestNet"] = eth.NewEthereumRPC
 	BlockChainFactories["Arbitrum"] = eth.NewEthereumRPC
 	BlockChainFactories["Arbitrum TestNet"] = eth.NewEthereumRPC
+	BlockChainFactories["Optimism"] = eth.NewEthereumRPC
+	BlockChainFactories["Optimism TestNet"] = eth.NewEthereumRPC
 }
 
 // GetCoinNameFromConfig gets coin name and coin shortcut from config file

@@ -38,6 +38,7 @@
 | Hydra                  | 9063                    | 9163                  | 8063             | 38363                       |
 | Flo                    | 9066                    | 9166                  | 8066             | 38366                       |
 | Polis                  | 9067                    | 9167                  | 8067             | 38367                       |
+| Optimism               | 9068                    | 9168                  | 8068             |                             |
 | Qtum                   | 9088                    | 9188                  | 8088             | 38388                       |
 | Divi Project           | 9089                    | 9189                  | 8089             | 38389                       |
 | CPUchain               | 9090                    | 9190                  | 8090             | 38390                       |
@@ -70,10 +71,12 @@
 | Koto Testnet           | 19051                   | 19151                 | 18051            | 48351                       |
 | Decred Testnet         | 19061                   | 19161                 | 18061            | 48361                       |
 | Flo Testnet            | 19066                   | 19166                 | 18066            | 48366                       |
+| Optimism Testnet       | 19068                   | 19168                 | 18068            |                             |
 | Qtum Testnet           | 19088                   | 19188                 | 18088            | 48388                       |
 | Omotenashicoin Testnet | 19089                   | 19189                 | 18089            | 48389                       |
 | Arbitrum  Testnet      | 19098                   | 19198                 | 18098            |                             | 
 | Polygon Testnet        | 19099                   | 19199                 | 18099            |                             |
+
 
 
 > NOTE: This document is generated from coin definitions in `configs/coins`.
