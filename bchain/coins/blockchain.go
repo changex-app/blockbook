@@ -141,7 +141,8 @@ func init() {
 	BlockChainFactories["Arbitrum TestNet"] = eth.NewEthereumRPC
 	BlockChainFactories["Avalanche"] = avalanche.NewAvalancheRPC
 	BlockChainFactories["Avalanche Archive"] = avalanche.NewAvalancheRPC
-	BlockChainFactories["Kucoin"] = kucoin.NewKucoinRPC
+	BlockChainFactories["KuCoin Community Chain"] = kucoin.NewKucoinRPC
+	BlockChainFactories["KuCoin Community Chain TestNet"] = kucoin.NewKucoinRPC
 }
 
 // GetCoinNameFromConfig gets coin name and coin shortcut from config file

@@ -17,27 +17,27 @@ const (
 	MainNet eth.Network = 321
 )
 
-// BNBSmartChainRPC is an interface to JSON-RPC bsc service.
-type BNBSmartChainRPC struct {
+// KucoinRPC is an interface to JSON-RPC kucoin node.
+type KucoinRPC struct {
 	*eth.EthereumRPC
 }
 
-// NewBNBSmartChainRPC returns new BNBSmartChainRPC instance.
+// NewKucoinRPC returns new NewKucoinRPC instance.
 func NewKucoinRPC(config json.RawMessage, pushHandler func(bchain.NotificationType)) (bchain.BlockChain, error) {
 	c, err := eth.NewEthereumRPC(config, pushHandler)
 	if err != nil {
 		return nil, err
 	}
 
-	s := &BNBSmartChainRPC{
+	s := &KucoinRPC{
 		EthereumRPC: c.(*eth.EthereumRPC),
 	}
 
 	return s, nil
 }
 
-// Initialize bnb smart chain rpc interface
-func (b *BNBSmartChainRPC) Initialize() error {
+// Initialize kucoin rpc interface
+func (b *KucoinRPC) Initialize() error {
 	b.OpenRPC = func(url string) (bchain.EVMRPCClient, bchain.EVMClient, error) {
 		r, err := rpc.Dial(url)
 		if err != nil {

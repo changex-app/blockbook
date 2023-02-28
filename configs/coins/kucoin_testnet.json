@@ -1,9 +1,9 @@
 {
     "coin": {
-        "name": "Kucoin TestNet",
-        "shortcut": "KUCOIN TestNet",
-        "label": "Kucoin TestNet",
-        "alias": "Kucoin TestNet"
+        "name": "KuCoin Community Chain TestNet",
+        "shortcut": "KCC TestNet",
+        "label": "KuCoin Community Chain TestNet",
+        "alias": "KuCoin Community Chain TestNet"
     },
     "ports": {
         "backend_rpc": 18070,
@@ -52,7 +52,7 @@
                 "mempoolTxTimeoutHours": 48,
                 "queryBackendOnMempoolResync": true,
                 "fiat_rates": "coingecko",
-                "fiat_rates_params": "{\"url\": \"https://api.coingecko.com/api/v3\", \"coin\": \"ethereum\", \"periodSeconds\": 60}"
+                "fiat_rates_params": "{\"url\": \"https://api.coingecko.com/api/v3\", \"coin\": \"kcs\", \"periodSeconds\": 60}"
             }
         }
     },

@@ -1,9 +1,9 @@
 {
     "coin": {
-        "name": "Kucoin",
-        "shortcut": "KUCOIN",
-        "label": "Кucoin",
-        "alias": "Kucoin"
+        "name": "KuCoin Community Chain",
+        "shortcut": "KCC",
+        "label": "КuCoin Community Chain",
+        "alias": "KuCoin Community Chain"
     },
     "ports": {
         "backend_rpc": 8070,
@@ -52,7 +52,7 @@
                 "mempoolTxTimeoutHours": 48,
                 "queryBackendOnMempoolResync": true,
                 "fiat_rates": "coingecko",
-                "fiat_rates_params": "{\"url\": \"https://api.coingecko.com/api/v3\", \"coin\": \"ethereum\", \"periodSeconds\": 60}"
+                "fiat_rates_params": "{\"url\": \"https://api.coingecko.com/api/v3\", \"coin\": \"kcs\", \"periodSeconds\": 60}"
             }
         }
     },
