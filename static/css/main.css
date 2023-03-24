@@ -217,8 +217,8 @@ span.btn-paging:hover {
 }
 
 #footer {
-    background-color: black;
-    color: #757575;
+    background-color: #fff;
+    color: var(--bs-navbar-brand-hover-color);
     height: 56px;
     overflow: hidden;
 }
