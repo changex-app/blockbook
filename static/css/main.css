@@ -223,6 +223,10 @@ span.btn-paging:hover {
     overflow: hidden;
 }
 
+.nav-link {
+    color: #212529 !important;
+}
+
 .navbar-form {
     width: 60%;
 }
