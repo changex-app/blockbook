@@ -43,7 +43,7 @@
 | Arbitrum               | 9069                    | 9169                  | 8069             |                             |
 | Kucoin                 | 9070                    | 9170                  | 8070             |                             |
 | Polygon                | 9071                    | 9171                  | 8071             | 38386 p2p, 8171 http       |
-| Polygon Archive        | 9072                    | 9172                  | 8072             | 3838 p2p, 8302 http 
+| Polygon Archive        | 9072                    | 9172                  | 8072             | 38387 p2p, 8172 http 
 | Qtum                   | 9088                    | 9188                  | 8088             | 38388                       |
 | Divi Project           | 9089                    | 9189                  | 8089             | 38389                       |
 | CPUchain               | 9090                    | 9190                  | 8090             | 38390                       |
