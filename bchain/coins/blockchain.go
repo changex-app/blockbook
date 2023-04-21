@@ -11,6 +11,7 @@ import (
 
 	"github.com/juju/errors"
 	"github.com/trezor/blockbook/bchain"
+	"github.com/trezor/blockbook/bchain/coins/arbitrum"
 	"github.com/trezor/blockbook/bchain/coins/avalanche"
 	"github.com/trezor/blockbook/bchain/coins/bch"
 	"github.com/trezor/blockbook/bchain/coins/bellcoin"
@@ -137,8 +138,8 @@ func init() {
 	BlockChainFactories["Trezarcoin"] = trezarcoin.NewTrezarcoinRPC
 	BlockChainFactories["ECash"] = ecash.NewECashRPC
 	BlockChainFactories["Hydra"] = hydra.NewHydraRPC
-	BlockChainFactories["Arbitrum"] = eth.NewEthereumRPC
-	BlockChainFactories["Arbitrum TestNet"] = eth.NewEthereumRPC
+	BlockChainFactories["Arbitrum"] = arbitrum.NewArbitrumRPC
+	BlockChainFactories["Arbitrum TestNet"] = arbitrum.NewArbitrumRPC
 	BlockChainFactories["Avalanche"] = avalanche.NewAvalancheRPC
 	BlockChainFactories["Avalanche Archive"] = avalanche.NewAvalancheRPC
 	BlockChainFactories["BNB Smart Chain"] = bsc.NewBNBSmartChainRPC
