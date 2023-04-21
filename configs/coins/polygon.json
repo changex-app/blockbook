@@ -57,4 +57,9 @@
         "fiat_rates_params": "{\"url\": \"https://api.coingecko.com/api/v3\", \"coin\": \"matic-network\",\"platformIdentifier\": \"polygon-pos\",\"platformVsCurrency\": \"usd\",\"periodSeconds\": 900}"
       }
     }
+},
+    "meta": {
+      "package_maintainer": "martin-key",
+      "package_maintainer_email": "martin@gostartups.net"
+    }
 }
