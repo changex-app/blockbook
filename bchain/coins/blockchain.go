@@ -137,8 +137,6 @@ func init() {
 	BlockChainFactories["Trezarcoin"] = trezarcoin.NewTrezarcoinRPC
 	BlockChainFactories["ECash"] = ecash.NewECashRPC
 	BlockChainFactories["Hydra"] = hydra.NewHydraRPC
-	BlockChainFactories["Polygon"] = eth.NewEthereumRPC
-	BlockChainFactories["Polygon TestNet"] = eth.NewEthereumRPC
 	BlockChainFactories["Arbitrum"] = eth.NewEthereumRPC
 	BlockChainFactories["Arbitrum TestNet"] = eth.NewEthereumRPC
 	BlockChainFactories["Avalanche"] = avalanche.NewAvalancheRPC
@@ -148,6 +146,7 @@ func init() {
 	BlockChainFactories["KuCoin Community Chain"] = kucoin.NewKucoinRPC
 	BlockChainFactories["KuCoin Community Chain TestNet"] = kucoin.NewKucoinRPC
 	BlockChainFactories["Polygon"] = polygon.NewPolygonRPC
+	BlockChainFactories["Polygon TestNet"] = polygon.NewPolygonRPC
 	BlockChainFactories["Polygon Archive"] = polygon.NewPolygonRPC
 }
 
