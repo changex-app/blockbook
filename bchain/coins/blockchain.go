@@ -137,6 +137,7 @@ func init() {
 	BlockChainFactories["Trezarcoin"] = trezarcoin.NewTrezarcoinRPC
 	BlockChainFactories["ECash"] = ecash.NewECashRPC
 	BlockChainFactories["Hydra"] = hydra.NewHydraRPC
+	BlockChainFactories["Hydra TestNet"] = hydra.NewHydraRPC
 	BlockChainFactories["Polygon"] = eth.NewEthereumRPC
 	BlockChainFactories["Polygon TestNet"] = eth.NewEthereumRPC
 	BlockChainFactories["Arbitrum"] = arbitrum.NewArbitrumRPC
