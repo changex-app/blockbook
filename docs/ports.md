@@ -77,7 +77,7 @@
 | Koto Testnet           | 19051                   | 19151                 | 18051            | 48351                       |
 | Decred Testnet         | 19061                   | 19161                 | 18061            | 48361                       |
 | Flo Testnet            | 19066                   | 19166                 | 18066            | 48366                       |
-| Polygon Testnet        | 19068                   | 19168                 | 18068            |                             |
+| Polygon Testnet        | 19071                   | 19171                 | 18071            |                             |
 | Arbitrum  Testnet      | 19069                   | 19169                 | 18069            |                             | 
 | Kucoin                 | 19070                   | 19170                 | 18070            |                             | 
 | Qtum Testnet           | 19088                   | 19188                 | 18088            | 48388                       |
