@@ -35,10 +35,6 @@ const (
 	// TestNetGoerli is Goerli test network
 	TestNetGoerli Network = 5
 
-	PolygonNet Network = 137
-
-	PolygonTestNet Network = 80001
-
 	// TestNetSepolia is Sepolia test network
 	TestNetSepolia Network = 11155111
 )
@@ -154,12 +150,6 @@ func (b *EthereumRPC) Initialize() error {
 	case TestNetGoerli:
 		b.Testnet = true
 		b.Network = "goerli"
-	case PolygonNet:
-		b.Testnet = false
-		b.Network = "polygon_mainnet"
-	case PolygonTestNet:
-		b.Testnet = true
-		b.Network = "Polygon_testnet"
 	case TestNetSepolia:
 		b.Testnet = true
 		b.Network = "sepolia"
