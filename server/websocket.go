@@ -18,6 +18,7 @@ import (
 	"github.com/trezor/blockbook/bchain"
 	"github.com/trezor/blockbook/common"
 	"github.com/trezor/blockbook/db"
+	"github.com/trezor/blockbook/fiat"
 )
 
 const upgradeFailed = "Upgrade failed: "
@@ -70,8 +71,13 @@ type WebsocketServer struct {
 }
 
 // NewWebsocketServer creates new websocket interface to blockbook and returns its handle
+<<<<<<< HEAD
 func NewWebsocketServer(db *db.RocksDB, chain bchain.BlockChain, mempool bchain.Mempool, txCache *db.TxCache, metrics *common.Metrics, is *common.InternalState) (*WebsocketServer, error) {
 	api, err := api.NewWorker(db, chain, mempool, txCache, metrics, is)
+=======
+func NewWebsocketServer(db *db.RocksDB, chain bchain.BlockChain, mempool bchain.Mempool, txCache *db.TxCache, metrics *common.Metrics, is *common.InternalState, fiatRates *fiat.FiatRates) (*WebsocketServer, error) {
+	api, err := api.NewWorker(db, chain, mempool, txCache, metrics, is, fiatRates)
+>>>>>>> trezor/master
 	if err != nil {
 		return nil, err
 	}
@@ -341,6 +347,17 @@ var requestHandlers = map[string]func(*WebsocketServer, *websocketChannel, *WsRe
 		}
 		return
 	},
+<<<<<<< HEAD
+=======
+	"getMempoolFilters": func(s *WebsocketServer, c *websocketChannel, req *WsReq) (rv interface{}, err error) {
+		r := WsMempoolFiltersReq{}
+		err = json.Unmarshal(req.Params, &r)
+		if err == nil {
+			rv, err = s.getMempoolFilters(&r)
+		}
+		return
+	},
+>>>>>>> trezor/master
 	"subscribeNewBlock": func(s *WebsocketServer, c *websocketChannel, req *WsReq) (rv interface{}, err error) {
 		return s.subscribeNewBlock(c, req)
 	},
@@ -628,6 +645,11 @@ func (s *WebsocketServer) sendTransaction(tx string) (res resultSendTransaction,
 		return res, err
 	}
 	res.Result = txid
+	return
+}
+
+func (s *WebsocketServer) getMempoolFilters(r *WsMempoolFiltersReq) (res bchain.MempoolTxidFilterEntries, err error) {
+	res, err = s.mempool.GetTxidFilterEntries(r.ScriptType, r.FromTimestamp)
 	return
 }
 

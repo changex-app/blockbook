@@ -56,8 +56,15 @@ func main() {
 	t.Add(server.WsCurrentFiatRatesReq{})
 	t.Add(server.WsFiatRatesForTimestampsReq{})
 	t.Add(server.WsFiatRatesTickersListReq{})
+<<<<<<< HEAD
 
 	err := t.ConvertToFile("blockbook-api.d.ts")
+=======
+	t.Add(server.WsMempoolFiltersReq{})
+	t.Add(bchain.MempoolTxidFilterEntries{})
+
+	err := t.ConvertToFile("blockbook-api.ts")
+>>>>>>> trezor/master
 	if err != nil {
 		panic(err.Error())
 	}

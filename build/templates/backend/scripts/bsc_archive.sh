@@ -33,7 +33,11 @@ $GETH_BIN \
   --cache.gc 0 \
   --cache.trie 30 \
   --syncmode full \
+<<<<<<< HEAD
   --maxpeers 100 \
+=======
+  --maxpeers 200 \
+>>>>>>> trezor/master
   --rpc.allow-unprotected-txs \
   --txlookuplimit 0 \
   --cache 8000 \
